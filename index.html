@@ -1,0 +1,183 @@
+<!DOCTYPE HTML xmlns:wb="http://open.weibo.com/wb">
+<html>
+<head>
+	<title>红岸WEB - BLVER</title>
+	<link href="/statics/blver/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/statics/blver/css/style.css" rel='stylesheet' type='text/css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="红岸,WEB,PHP,前端,HTML,CSS,JS,JQUERY" />
+	<meta name="description" content="学习WEB技术">
+
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!----webfonts---->
+		<link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		  <script src="/statics/js/jquery-1.11.3.min.js"></script>
+		<!--end slider -->
+		<!--script-->
+<script type="text/javascript" src="/statics/blver/js/move-top.js"></script>
+<script type="text/javascript" src="/statics/blver/js/easing.js"></script>
+<script type="text/javascript" src="/statics/layer/layer.js"></script>
+<!--/script-->
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+<!---->
+<style>
+	.WB_follow_ex .follow_text{width:40px!important;}
+</style>
+</head>
+<body><!---header---->			
+<div class="header">  
+	 <div class="container">
+		  <div class="logo">
+			  <a href="index.html"><img src="/statics/blver/images/logo.jpg" title="" /></a>
+		  </div>
+			 <!---start-top-nav---->
+			 <div class="top-menu">
+				 <div class="search">
+					 <form id="myForm" action="/index.php" method="get" target="_blank">
+				        <input type="hidden" name="m" value="search"/>
+		                <input type="hidden" name="c" value="index"/>
+		                <input type="hidden" name="a" value="init"/>
+		                
+		                <input type="hidden" name="typeid" value="53" id="typeid"/>
+		                <input type="hidden" name="siteid" value="1" id="siteid"/>
+		                <input  name="q" type="text" class="text" id="search" placeholder="键入你感兴趣的内容" />
+		                <input type="submit" class="btn" id="submit-search" name="submit" value="" />
+
+					</form>
+				<script type="text/javascript">
+				$(document).ready(function(){
+						function delHtmlTag(str)
+						{
+						        var str=str.replace(/<\/?[^>]*>/gim,"");//去掉所有的html标记
+						        var result=str.replace(/(^\s+)|(\s+$)/g,"");//去掉前后空格
+						        return  result.replace(/\s/g,"");//去除文章中间空格
+						}
+				      $("#submit-search").on("click",function(){
+				      		var con = delHtmlTag($('#search').val());
+							if(con == ''){
+								layer.msg('请输入搜索内容');
+						 	return false;
+							}
+						});
+				});
+				</script>
+				 </div>
+				  <span class="menu"> </span> 
+ 					<ul>
+ 						<li class="active"><a href="http://www.blver.cn/">首页</a></li>
+ 											      					                     <li ><a href="http://www.blver.cn/index.php?m=content&c=index&a=lists&catid=9"><span>WEB前端</span></a></li>     
+					      					                     <li ><a href="http://www.blver.cn/index.php?m=content&c=index&a=lists&catid=10"><span>HTML</span></a></li>     
+					      					                     <li ><a href="http://www.blver.cn/index.php?m=content&c=index&a=lists&catid=11"><span>CSS</span></a></li>     
+					      					                     <li ><a href="http://www.blver.cn/index.php?m=content&c=index&a=lists&catid=12"><span>JS/JQUERY</span></a></li>     
+					      					                     <li ><a href="http://www.blver.cn/index.php?m=content&c=index&a=lists&catid=13"><span>BOOTSTRAP</span></a></li>     
+					      					                     <li ><a href="http://www.blver.cn/index.php?m=content&c=index&a=lists&catid=14"><span>PHP</span></a></li>     
+					      					                     <li ><a href="http://www.blver.cn/index.php?m=content&c=index&a=lists&catid=15"><span>MySQL</span></a></li>     
+					      					                     <li ><a href="http://www.blver.cn/index.php?m=content&c=index&a=lists&catid=17"><span>留言</span></a></li>     
+					      					     						<div class="clearfix"> </div>
+ 					</ul>
+			 </div>
+			 <div class="clearfix"></div>
+					<script>
+					$("span.menu").click(function(){
+						$(".top-menu ul").slideToggle("slow" , function(){
+						});
+					});
+					</script>
+				<!---//End-top-nav---->					
+	 </div>
+</div>
+<!--/header--><!--main-->
+<div class="content">
+     <div class="container">
+         <div class="content-grids">
+             <div class="col-md-8 content-main">
+                 <div class="content-grid">
+        
+                     <div class="content-grid-info">
+                                                  <div class="post-info">
+                         <h4><a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=9">nodejs v4.4.5在windows下的安装</a>  2016-11-01 09:20:21  </h4>
+                         <p>1、下载nodejs的msi然后安装，我安装在了D:  Program Files  nodejs安装好之后可在CMD中输入node --version查看版本2、安装相关环境 本版本自带npm，而且在安装的时候已经配置了全局变量 因此只需要在管理员身份下运行CMD，然后进入nodejs的安装目录下 键入： npm install express -g回车然后等待安装 键入： npm install</p>
+                         <a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=9"><span></span>了解更多</a>
+                         </div>
+                     </div>
+        
+                     <div class="content-grid-info">
+                         <a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=8" title="jQuery lazytab插件开发，延迟切换，防止误触"><img src="http://www.blver.cn/uploadfile/2016/1101/20161101091701160.jpg" alt="jQuery lazytab插件开发，延迟切换，防止误触"/></a>                         <div class="post-info">
+                         <h4><a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=8">jQuery lazytab插件开发，延迟切换，防止误触</a>  2016-11-01 09:16:21  </h4>
+                         <p>首先放代码（代码源于网络）$(function(){$ fn hoverDelay = function(options){var defaults = {hoverDuring: 200,outDuring: 200,hoverEvent: function(){$ noop();},outEvent: function(){$ noop();}};var sets = $ extend(def</p>
+                         <a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=8"><span></span>了解更多</a>
+                         </div>
+                     </div>
+        
+                     <div class="content-grid-info">
+                         <a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=7" title="textarea提示还能输入多少字"><img src="http://www.blver.cn/uploadfile/2016/1031/20161031115252415.jpg" alt="textarea提示还能输入多少字"/></a>                         <div class="post-info">
+                         <h4><a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=7">textarea提示还能输入多少字</a>  2016-10-31 11:52:02  </h4>
+                         <p>  搜集的网上资源这个是判断字符的，如果是判断汉字，需要根据你网页的编码来计算。如果是GBK  GB2312编码，2个字节=1个汉字如果是unicode  utf-8编码，里面汉字是长度不是一定的，有的长、有的短，2～4=1个汉字&amp;lt;textarea name=&amp;quot;content&amp;quot; id=&amp;quot;content&amp;quot; style=&amp;quot;width:345px;he</p>
+                         <a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=7"><span></span>了解更多</a>
+                         </div>
+                     </div>
+        
+                     <div class="content-grid-info">
+                                                  <div class="post-info">
+                         <h4><a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=6">jQuery UI DatePicker用法和中文设置</a>  2016-10-31 11:47:01  </h4>
+                         <p>  学习笔记首先要去把相对应的jquery-ui min css和jquery-ui min js和images下载下来（完整包如下：http:  download jqueryui com download）然后引入到你的项目中在使用的时候只需要&amp;lt;script&amp;gt;$(document) ready(function() {$(&amp;quot; demoInput&amp;quot;) datepi</p>
+                         <a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=6"><span></span>了解更多</a>
+                         </div>
+                     </div>
+        
+                     <div class="content-grid-info">
+                                                  <div class="post-info">
+                         <h4><a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=5">JavaScript面向对象的写法</a>  2016-10-31 11:11:52  </h4>
+                         <p>定义一个Circle类，拥有成员变量r，常量PI，和计算面积的成员函数area();  第1种写法 function Circle(r) {this r = r;}Circle PI = 3 14159;Circle prototype area = function() {return Circle PI * this r * this r;}var c = new Circle(1 0);al</p>
+                         <a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=5"><span></span>了解更多</a>
+                         </div>
+                     </div>
+        
+                     <div class="content-grid-info">
+                         <a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=9&id=4" title="今天网站正式上线啦~~~"><img src="http://www.blver.cn/uploadfile/2016/1031/20161031103706848.jpg" alt="今天网站正式上线啦~~~"/></a>                         <div class="post-info">
+                         <h4><a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=9&id=4">今天网站正式上线啦~~~</a>  2016-10-31 10:30:39  </h4>
+                         <p>看官老爷们大家好，本站提供本人总结的全面的WEB学习资料和心得，偶尔更新下职业规划方面的文章，不定时更新内容，喜欢我的可以点击右侧微博关注: D</p>
+                         <a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=9&id=4"><span></span>了解更多</a>
+                         </div>
+                     </div>
+                     </div>
+              </div>
+              <!-- 右侧的栏目 -->
+              <div class="col-md-4 content-right">
+                 <div class="recent">
+                     <h3>热点文章</h3>
+                     <ul>
+    
+        
+                     <li><a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=8" title="jQuery lazytab插件开发，延迟切换，防止误触">jQuery lazytab插件开发，延迟切</a></li>
+        
+                     <li><a href="http://www.blver.cn/index.php?m=content&c=index&a=show&catid=12&id=6" title="jQuery UI DatePicker用法和中文设置">jQuery UI DatePicker用法</a></li>
+                         </ul>
+                 </div>
+                 <div class="comments">
+                     <h3>关于作者</h3>
+                     <ul>
+                     <wb:follow-button uid="3172292581" type="red_3" width="100%" height="24" ></wb:follow-button>
+                     </ul>
+                 </div>
+                 <div class="clearfix"></div>
+              </div>              <div class="clearfix"></div>
+          </div>
+      </div>
+</div>
+<div class="footer">
+	 <div class="container">
+	 	<p>Copyrights © 2017 Blog All rights reserved<span>陕ICP备14003174号-1</span></p>
+	 </div>
+</div>

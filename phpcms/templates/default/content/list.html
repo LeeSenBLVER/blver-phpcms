@@ -1,0 +1,29 @@
+{template "blverlayout","top"}
+{template "blverlayout","header"}
+<!--main-->
+<div class="content">
+     <div class="container">
+         <div class="content-grids">
+             <div class="col-md-8 content-main">
+                 <div class="content-grid">
+{pc:content action="lists" catid="$catid" order="id DESC" num="20"}    
+    {loop $data $key $val}    
+                     <div class="content-grid-info">
+                         {if $val[thumb] != ''}<a href="{$val[url]}" title="{$val[title]}"><img src="{$val[thumb]}" alt="{$val[title]}"/></a>{/if}
+                         <div class="post-info">
+                         <h4><a href="{$val[url]}">{$val[title]}</a>  {date("Y-m-d H:i:s ",$val[inputtime])} </h4>
+                         <p>{$val[description]}</p>
+                         <a href="{$val[url]}"><span></span>了解更多</a>
+                         </div>
+                     </div>
+    {/loop}
+{/pc}
+                 </div>
+              </div>
+              <!-- 右侧的栏目 -->
+{template "blverlayout","sidebar"}
+              <div class="clearfix"></div>
+          </div>
+      </div>
+</div>
+{template "blverlayout","footer"}

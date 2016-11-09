@@ -1,0 +1,5 @@
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><div class="footer">
+	 <div class="container">
+	 	<p>Copyrights © 2017 Blog All rights reserved<span>陕ICP备14003174号-1</span></p>
+	 </div>
+</div>

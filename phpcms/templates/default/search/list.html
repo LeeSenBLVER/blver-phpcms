@@ -1,0 +1,31 @@
+{template 'blverlayout', 'top'}
+{template 'blverlayout', 'header'}
+<div class="content">
+     <div class="container">
+         <div class="content-grids">
+             <div class="col-md-8 content-main">
+{pc:get sql="SELECT * FROM `my_lists` where title like '%$q%' order by id DESC " num="10" page="$page" return="data"}
+    <?php $countnum = count($data); ?>
+                <div class="search-info">搜索 <span>{$q}</span> 获得约 {$countnum} 条结果</div>
+                 <div class="content-grid">
+    {loop $data $r}              
+                    <div class="content-grid-info">
+                         {if $r[thumb] != ''}<a href="{$r[url]}"><img src="{$r[thumb]}" alt="{$r[title]}"/></a>{/if}
+                         <div class="post-info">
+                         <h4><a href="{$r[url]}">{$r[title]}</a>  {date("Y-m-d H:i:s ",$r[inputtime])} </h4>
+                         <p>{$r[description]}</p>
+                         <a href="{$r[url]}"><span></span>了解更多</a>
+                         </div>
+                     </div>
+    {/loop}
+                 </div>
+              </div>
+{/pc}
+              <!-- 右侧的栏目 -->
+{template "blverlayout","sidebar"}
+              <div class="clearfix"></div>
+          </div>
+      </div>
+</div>
+
+{template 'blverlayout', 'footer'}
